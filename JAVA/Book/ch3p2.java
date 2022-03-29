@@ -32,15 +32,12 @@ public class ch3p2 {
             else if(arr[i]<max&&arr[i]>next)
                 next=arr[i];
         }
-        System.out.println(max+" "+next+"\n");
 
         while(K<M){
            count+= max*K+next;
            M-=K+1;
-           System.out.println(M+" "+count+"\n");
         }
         if(M!=0)
-        System.out.println(M);
         count+=max*M;
 
         System.out.println(count);
