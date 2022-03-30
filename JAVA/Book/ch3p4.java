@@ -9,8 +9,8 @@ public class ch3p4 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st= new StringTokenizer(br.readLine());
-        int N=Integer.parseInt(st.nextToken(br.readLine()));
-        int K=Integer.parseInt(st.nextToken(br.readLine()));
+        int N=Integer.parseInt(st.nextToken());
+        int K=Integer.parseInt(st.nextToken());
         int count=0;
 
         while (true){
@@ -24,7 +24,7 @@ public class ch3p4 {
                 N-=1;
                 count++;
             }
-            System.out.println(N);
+
         }
         System.out.println(count);
     }
