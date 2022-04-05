@@ -3,24 +3,24 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class ch4p2 {
-    public static boolean check(int h,int m, int s){
-        if(h%10==3||m%10==3||m/10==3||s%10==3||s/10==3)
-            return true;
-        return false;
-    }
-
     public static void main(String[] args) throws IOException {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        int N= Integer.parseInt(br.readLine());
+        String st=br.readLine();
+        char n=st.charAt(0);
+        int m=Character.getNumericValue(st.charAt(1));
+        char[] alp={'a','b','c','d','e','f','g','h'};
+        int[] num={1,2,3,4,5,6,7,8};
         int count=0;
-        for(int i=0;i<N+1;i++){
-            for(int j=0;j<60;j++){
-                for(int k=0;k<60;k++){
-                    if(check(i,j,k))count++;
-                }
+        for(int i=0;i<alp.length;i++){
+            if(n==alp[i]){
+                if(num[i]<7&&num[i]>2&&m<8&&m>1)
+                    count+=4;
+                else if((num[i]>6||num[i]<3)&&m<8&&m>1)
+                    count+=2;
+                else if((m>6||m<3)&&num[i]>1&&num[i]<8)
+                    count+=2;
             }
         }
-        System.out.print(count);
-
+        System.out.println(count);
     }
 }
