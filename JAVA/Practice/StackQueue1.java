@@ -1,4 +1,4 @@
-class StackQueue1 {
+public class StackQueue1 {
     public static int[] solution(int[] progresses, int[] speeds) {
         int[] left=new int[progresses.length];
         for(int i=0;i<progresses.length;i++){
